@@ -21,7 +21,7 @@ Use this playlist as long as you are learning Python:
 - [Pycodestyle – Style Guide for Python Code](https://pypi.org/project/pycodestyle/)
 
 # Learning Objectives
-At the end of this project, you are expected to be able to [explain to anyone] (https://fs.blog/feynman-learning-technique/), without the help of Google:
+At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), without the help of Google:
 
 # General
 How to use the Python interpreter
@@ -43,4 +43,4 @@ All your files must be executable
 The length of your files will be tested using wc
 More Info
 Pycodestyle
-Pycodestyle is now the [new standard of Python style code] (https://github.com/PyCQA/pycodestyle/issues/466)
+Pycodestyle is now the [new standard of Python style code](https://github.com/PyCQA/pycodestyle/issues/466)
