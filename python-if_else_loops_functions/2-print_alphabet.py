@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-alphabet = 26
-res = ""
-for idx in range(97, 97 + alphabet):
-       res = res + chr(idx) 
-print(str(res))
+alphabet = ""
+for alpha in range(97, 123):
+    alphabet += chr(alpha)
+print("{}".format(alphabet), end="")
