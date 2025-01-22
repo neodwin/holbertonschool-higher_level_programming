@@ -5,3 +5,4 @@
 * ## 3. [Python - Import modules](./python-import_modules)
 * ## 4. [Python - Data Structures: Lists, Tuples](./python-data_structures)
 * ## 5. [Python - More Data Structures: Set, Dictionary](./python-more_data_structures/)
+* ## 6. [Python - Exceptions](./python-exceptions/)
