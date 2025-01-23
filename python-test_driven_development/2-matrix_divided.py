@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Matrix divided - function that divides all elements of a matrix.
+"""
+
+
 def matrix_divided(matrix, div):
     if (not isinstance(matrix, list) or matrix == [] or
             not all(isinstance(row, list) for row in matrix) or
