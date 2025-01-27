@@ -7,3 +7,5 @@
 * ## 5. [Python - More Data Structures: Set, Dictionary](./python-more_data_structures/)
 * ## 6. [Python - Exceptions](./python-exceptions/)
 * ## 7. [Python - Test-driven development](./python-test_driven_development/)
+* ## 8. [Python - Classes and Objects](./python-classes/)
+* ## 9. [Python - More Classes and Objects]()
