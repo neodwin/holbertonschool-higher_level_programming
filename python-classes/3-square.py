@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module defines a class square with a private instance,attribute: size
+Module defines a class square with a private instance attribute size
 """
 
 
