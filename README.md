@@ -9,3 +9,4 @@
 * ## 7. [Python - Test-driven development](./python-test_driven_development/)
 * ## 8. [Python - Classes and Objects](./python-classes/)
 * ## 9. [Python - More Classes and Objects](./python-more_classes/)
+* ## 10. [Python - Inheritance](./python-inheritance/)
