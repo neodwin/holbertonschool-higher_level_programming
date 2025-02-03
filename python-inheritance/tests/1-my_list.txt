@@ -29,7 +29,7 @@ Test: Negative list
 >>> my_list.print_sorted()
 [-3, -2, -1]
 
-Test: same int
+Test: Same int
 >>> my_list = MyList([1, 1, 1])
 >>> my_list.print_sorted()
 [1, 1, 1]
@@ -38,3 +38,13 @@ Test: 0 value
 >>> my_list = MyList([0])
 >>> my_list.print_sorted()
 [0]
+
+Test: Float 
+>>> my_list = MyList([0.1])
+>>> my_list.print_sorted()
+[0.1]
+
+Test: Sup 5
+>>> my_list = MyList([6])
+>>> my_list.print_sorted()
+[6]
