@@ -48,3 +48,8 @@ Test: Sup 5
 >>> my_list = MyList([6])
 >>> my_list.print_sorted()
 [6]
+
+Test: Doublon
+>>> my_list = MyList([3, 3, 2, 1, 1])
+>>> my_list.print_sorted()
+[1, 1, 2, 3, 3]
