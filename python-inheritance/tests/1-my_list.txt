@@ -53,3 +53,8 @@ Test: Doublon
 >>> my_list = MyList([3, 3, 2, 1, 1])
 >>> my_list.print_sorted()
 [1, 1, 2, 3, 3]
+
+Test: No int
+>>> my_list = MyList(['banana', 'apple', 'cherry'])
+>>> my_list.print_sorted()
+['apple', 'banana', 'cherry']
