@@ -89,3 +89,28 @@ Test: None as input
 Traceback (most recent call last):
     ...
 TypeError: none_value must be an integer
+
+Test: Tuple instead of integer
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("num_tuple", (1, 2, 3))
+Traceback (most recent call last):
+    ...
+TypeError: num_tuple must be an integer
+
+Test: List of numbers as input
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("num_list", [1, 2, 3])
+Traceback (most recent call last):
+    ...
+TypeError: num_list must be an integer
+
+Test: String "0" instead of zero
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("zero_string", "0")
+Traceback (most recent call last):
+    ...
+TypeError: zero_string must be an integer
+
