@@ -81,3 +81,11 @@ Test: Smallest valid integer
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("min_value", 1)
+
+Test: None as input
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("none_value", None)
+Traceback (most recent call last):
+    ...
+TypeError: none_value must be an integer
