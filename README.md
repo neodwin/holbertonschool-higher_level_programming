@@ -12,3 +12,4 @@
 * ## 10. [Python - Inheritance](./python-inheritance/)
 * ## 11. [Python - Abstract Classes and Interfaces](./python-abc/)
 * ## 12. [Python - Input/Output](./python-input_output/)
+* ## 13. [Python - Serialization](./python-serialization/)
