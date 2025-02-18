@@ -25,6 +25,12 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             response = {"status": "OK"}
             self.wfile.write(json.dumps(response).encode('utf-8'))
+        elif self.path == '/info':
+            info_data = {
+                "version": "1.0",
+                "description": "A simple API built with http.server"
+            }
+            self._send_json_response(info_data)
         else:
             self.send_response(404)
             self.send_header("Content-type", "application/json")
