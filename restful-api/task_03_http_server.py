@@ -1,5 +1,5 @@
-import json
 import http.server
+import json
 
 
 class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
