@@ -1,20 +1,11 @@
-import flask
+from flask import Flask, jsonify, request
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 users = {
-    "jane": {
-        "username": "jane",
-        "name": "Jane",
-        "age": 28,
-        "city": "Los Angeles"
-    },
-    "john": {
-        "username": "john",
-        "name": "John",
-        "age": 30,
-        "city": "New York"
-    }
+    "jane": {"username": "jane", "name": "Jane", "age": 28,
+             "city": "Los Angeles"},
+    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
 }
 
 
@@ -24,44 +15,39 @@ def home():
 
 
 @app.route('/data')
-def get_data():
-    return flask.jsonify(list(users.keys()))
+def data():
+    return jsonify(list(users.keys()))
 
 
 @app.route('/status')
-def get_status():
+def status():
     return "OK"
 
 
 @app.route('/users/<username>')
 def get_user(username):
-    if username in users:
-        return flask.jsonify(users[username])
-    return flask.jsonify({"error": "User not found"}), 404
+    user = users.get(username)
+    if user:
+        return jsonify(user)
+    else:
+        return jsonify({"error": "User not found"}), 404
 
 
 @app.route('/add_user', methods=['POST'])
 def add_user():
-    data = flask.request.get_json()
+    user_data = request.get_json()
 
-    if 'username' not in data:
-        return flask.jsonify({"error": "Username is required"}), 400
+    if 'username' not in user_data:
+        return jsonify({"error": "Username is required"}), 400
 
-    username = data['username']
-    new_user = {
-        "username": username,
-        "name": data.get('name'),
-        "age": data.get('age'),
-        "city": data.get('city')
-    }
+    username = user_data['username']
+    users[username] = user_data
 
-    users[username] = new_user
-
-    return flask.jsonify({
+    return jsonify({
         "message": "User added",
-        "user": new_user
+        "user": user_data
     }), 201
 
 
-if __name__ == '__main__':
-    app.run(port=5000)
+if __name__ == "__main__":
+    app.run(debug=True)
