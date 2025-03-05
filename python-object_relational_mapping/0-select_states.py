@@ -3,8 +3,8 @@
 Script that lists all states from the database hbtn_0e_0_usa.
 """
 
-import sys
 import MySQLdb
+import sys
 
 
 if __name__ == "__main__":
