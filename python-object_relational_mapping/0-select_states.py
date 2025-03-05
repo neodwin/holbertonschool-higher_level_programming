@@ -3,31 +3,26 @@
 Script that lists all states from the database hbtn_0e_0_usa.
 """
 
-import sys
 import MySQLdb
+import sys
 
 
-if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: {} <mysql username> <mysql password> <database name>"
-              .format(sys.argv[0]))
-        sys.exit(1)
+def main():
+    mysql_user = sys.argv[1]
+    mysql_password = sys.argv[2]
+    mysql_db = sys.argv[3]
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-
-    db = MySQLdb.connect(
+    connection = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
-        db=db_name
+        user=mysql_user,
+        passwd=mysql_password,
+        db=mysql_db
     )
 
-    cursor = db.cursor()
+    cursor = connection.cursor()
 
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT id, name FROM states ORDER BY id ASC;")
 
     states = cursor.fetchall()
 
@@ -35,4 +30,8 @@ if __name__ == "__main__":
         print(state)
 
     cursor.close()
-    db.close()
+    connection.close()
+
+
+if __name__ == "__main__":
+    main()
