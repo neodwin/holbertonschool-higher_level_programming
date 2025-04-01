@@ -18,3 +18,4 @@
 * ## 16. [SQL_more_queries](./SQL_more_queries/)
 * ## 17. [python-object_relational_mapping](./python-object_relational_mapping/)
 * ## 18. [Python - Server-Side Rendering](./python-server_side_rendering/)
+* ## 19. [JavaScript DOM manipulation](./javascript-dom_manipulation/)
