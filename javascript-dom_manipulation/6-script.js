@@ -7,5 +7,5 @@ fetch(url)
   characterDiv.textContent = data.name
   })
   .catch(error => {
-  console.error('Error:', error);
-});
+    console.error('Error:', error);
+  });
